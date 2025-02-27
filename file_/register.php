@@ -1,27 +1,34 @@
 <?php include'./_partial/_template/header.php';?>
 
-<div class="container login-container">
-            <div class="login-image">
+<div class="container Register-container">
+            <div class="Register-image">
                 <img src="aset/2.png" alt="Chat Zone Logo">
             </div>
     
-            <!-- Form Login -->
-            <div class="login-form">
+            <!-- Form Regsiter -->
+            <div class="Regsiter-form">
                 <div class="card p-4">
                     <h3 class="text-center mb-3">Login to Chat Zone</h3>
-                    <form action="dashboard.php" method="get">
+                    <form action="login.php" method="get">
+                   
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
                             <input type="text" class="form-control" id="username" placeholder="Enter Username" required>
                         </div>
                         <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+                        </div>
+                        <div class="mb-3">
                             <label for="password" class="form-label">Password</label>
                             <input type="password" class="form-control" id="password" placeholder="Enter Password" required>
                         </div>
-                        <button type="submit" class="btn btn-success w-100">Login</button>
+                        <div class="mb-3">
+                            <label for="confirm-password" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Register</button>
                     </form>
-                    <hr>
-				<p> <b> Belum punya akun? <a href="?page=register"> Daftar disini! </b> </a></p>
                 </div>
             </div>
         </div>

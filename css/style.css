@@ -1,0 +1,58 @@
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-form {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-image {
+    flex: 1;
+    max-width: 25%;
+    text-align: left;
+}
+
+.login-image img {
+    width: 100%;
+    max-width: 500px; 
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.Register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.Regsiter-form {
+    flex: 1;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.Register-image {
+    flex: 1;
+    max-width: 30%;
+    text-align: center;
+}
+
+.Register-image img {
+    width: 100%;
+    max-width: 500px; 
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}

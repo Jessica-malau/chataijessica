@@ -12,17 +12,17 @@
 
       <!-- Text Content -->
       <div class="" >
-        <h1 style="font-size:60px;"><b>Starvee Engine Update v.3 (vee-3)</b></h1>
-        <p class="text-muted">Gunakan Futuristik AI chatbot di lokal server kamu,<br />Layanan Chat bot virtual yang
-          bisa kamu gunain untuk bisnis sehari-hari bisa integrasi langsung di aplikasi kamu</p>
+        <h1 style="font-size:60px;"><b>ChatZone Versi Terbaru V.50</b></h1>
+        <p class="text-muted"><b>Gunakan ChatZone untuk membantu anda,<br />Layanan ChatZone virtual yang
+          bisa kamu gunain untuk sehari-hari langsung di aplikasi kamu</b></p>
 
       </div>
     </div>
   </div>
 <!-- Features Section -->
 <div class="container mt-5">
-  <h2 class="mb-3 fw-bolder">Starvee High Capabilites</h2>
-  <p>Due to high request of AI, The next generation AI Chatbot has been created to be reusable in code optimization in Aurora Server</p>
+  <h2 class="mb-3 fw-bolder"><center>Keunggulan ChatZone</h2></center
+  <h><center><h5>Berikut Keunggulan Chatzone</center></h5> </p>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
     
     <!-- Feature 1 -->
@@ -78,8 +78,42 @@
   </div>
 </div>
   </div>
+  
+  <!-- Testimonial Section -->
+  <div class="container my-5">
+        <h2 class="text-center mb-4 fw-bold">Testimoni</h2>
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            <div class="d-flex justify-content-center">
+                <div class="card testimonial-card mx-2">
+                    <div class="card-body">
+                        <p>"Membantu Saya dengan Proyek Saya."</p>
+                        <footer class="blockquote-footer">Sharu Khan</footer>
+                    </div>
+                </div>
+                <div class="card testimonial-card mx-2">
+                    <div class="card-body">
+                        <p>"Luar Biasa!"</p>
+                        <footer class="blockquote-footer">Rony Parulian</footer>
+                    </div>
+                </div>
+                <div class="card testimonial-card mx-2">
+                    <div class="card-body">
+                        <p>"Membantu Ngoding Begete."</p>
+                        <footer class="blockquote-footer">Jeff Smith</footer>
+                    </div>
+                </div>
+                <div class="card testimonial-card mx-2">
+                    <div class="card-body">
+                        <p>"Gada Lelet Lelet Nya Cuy!"</p>
+                        <footer class="blockquote-footer">Byeonce</footer>
+                    </div>
+                </div>
+            </div>
+        </marquee>
+    </div>
+ 
 
-  <footer class="bg-primary text-white text-center ">
+  <footer class="bg-dark text-white text-center ">
     <div class="container">
         <p>&copy; OUR SOCIAL MEDIA</p>
         <div>
