@@ -1,16 +1,12 @@
 <?php include'./_partial/_template/header.php';?>
-
+<body style="background-color: beige;" ></body>
   <div class="container mt-4">
     <div class="p-5 text-dark  d-flex align-items-center position-relative" style="border-top: 4px solid gold; 
                   border-right: 20px solid gold; 
                   border-top-right-radius: 40px;
                   border-radius: 0 0 50px 10px;">
 
-      <!-- Image on the left -->
-      <!-- <img src="image/robot-ai.png" alt="AI Robot" class="img-fluid"
-        style="width: 200px; height: auto; position: absolute; bottom: 10px; left: 20px;"> -->
-
-      <!-- Text Content -->
+      
       <div class="" >
         <h1 style="font-size:60px;"><b>ChatZone Versi Terbaru V.50</b></h1>
         <p class="text-muted"><b>Gunakan ChatZone untuk membantu anda,<br />Layanan ChatZone virtual yang
@@ -20,13 +16,13 @@
     </div>
   </div>
 <!-- Features Section -->
-<div class="container mt-5">
-  <h2 class="mb-3 fw-bolder"><center>Keunggulan ChatZone</h2></center
-  <h><center><h5>Berikut Keunggulan Chatzone</center></h5> </p>
+<div class="container" style="margin-bottom: 50px;" id="section1">
+  <h2 class="mb-3 fw-bolder"><center>Benefits of Chat AI</center></h2>
+  <p><center>Keunggulan Chat AI Kami</center></p>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
     
-    <!-- Feature 1 -->
-    <div class="col">
+     <!-- Feature 1 -->
+     <div class="col">
       <div class="card p-3  bg-light" 
            style="border-top: 4px solid gold; border-right: 4px solid orange; 
                   border-radius: 0 0 50px 10px;">
@@ -74,14 +70,11 @@
     </div>
     </div>
     </div>
-
-  </div>
+    </div>
 </div>
-  </div>
-  
-  <!-- Testimonial Section -->
-  <div class="container my-5">
-        <h2 class="text-center mb-4 fw-bold">Testimoni</h2>
+<!-- Testimonial Section -->
+<div class="container my-5"style="margin-bottom: 50px;" id="section2"></div>
+        <h2 class="text-center mb-4 fw-bold">Testimoni</h2> 
         <marquee behavior="scroll" direction="left" scrollamount="10">
             <div class="d-flex justify-content-center">
                 <div class="card testimonial-card mx-2">
@@ -110,26 +103,24 @@
                 </div>
             </div>
         </marquee>
-    </div>
- 
+    </div>
 
-  <footer class="bg-dark text-white text-center ">
+<footer class="bg-dark text-white text-center mt-auto py-2" style="padding: 20px 0;">
     <div class="container">
-        <p>&copy; OUR SOCIAL MEDIA</p>
-        <div>
-            <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
-                <i class="fab fa-instagram fa-2x"></i>
-            </a>
-            <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
-                <i class="fab fa-facebook fa-2x"></i>
-            </a>
-            <a href="https://twitter.com" target="_blank" class="text-white mx-2">
-                <i class="fab fa-twitter fa-2x"></i>
-            </a>
-        </div>
+      <b>&copy; <b>OUR SOCIAL MEDIA</b></p>
+      <div>
+        <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
+          <i class="fab fa-facebook fa-2x"></i>
+        </a>
+        <a href="https://twitter.com" target="_blank" class="text-white mx-2">
+          <i class="fab fa-twitter fa-2x"></i>
+        </a>
+      </div>
     </div>
-</footer>
-
+  </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>

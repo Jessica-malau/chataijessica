@@ -7,15 +7,15 @@
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="././css/style.css">
+  <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-5 border-warning">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-5 border-warning sticky-top">
+<div class="container-fluid">
       <a class="navbar-brand text-white fw-bold" href="index.php">
         <h1 class="mb-0"><i class="bi bi-robot text-warning"></i><b>&nbsp;ChatZone</b></h1>
       </a>
@@ -26,24 +26,15 @@
 
       <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
         <ul class="navbar-nav me-3 my-2 my-lg-0 navbar-nav-scroll">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="#home" style="font-size: 20px;"><b>Home</b></a>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="index.php?page=home" style="font-size: 20px;">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" href ="#product" style="font-size: 20px;"><b>Premium</b></a>
+            <a class="nav-link text-white" href="#section1" style="font-size: 20px;">Keunggulan</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text-white" href="#documentation" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false" style="font-size: 20px;">
-            <b>  Menu</b>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">API Integrations</a></li>
-              <li><a class="dropdown-item" href="#">Embedded AI Chatbots</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Cloud,. Datasets</a></li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#section2" style="font-size: 20px;">Testimoni</a>
+          </li>
             </ul>
           </li>
         </ul>
