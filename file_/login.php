@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             </div>
 
-                        <button class="btn btn-primary w-100 py-2 mt-3" type="submit">Login</button>
+                        <button class="btn btn-warning w-100 py-2 mt-3" type="submit">Login</button>
                         
                         <div class="text-center mt-3">
                             Belum memiliki akun? <a href="?page=register">Register</a>

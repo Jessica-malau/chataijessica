@@ -14,7 +14,7 @@
   <nav class="navbar navbar-expand-lg bg-dark border-bottom border-5 border-warning">
     <div class="container-fluid">
       <a class="navbar-brand text-white fw-bold" href="">
-        <h1 class="mb-0"><i class="bi bi-chat-right-heart-fill text-dark"></i><b>&nbsp;ChatAI</b></h1>
+      <h1 class="mb-0"><i class="bi bi-robot text-warning"></i><b>&nbsp;ChatZone</b></h1>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
         aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -49,7 +49,7 @@
 
       <!-- Text Content -->
       <div class="text-center">
-        <h2 style="font-size:60px;"><b>Welcome, Administrator <?php echo $_SESSION['fullname'];?>!</b></h2>
+        <h5 style="font-size:60px;"><b>Welcome, <?php echo $_SESSION['fullname'];?>!</b></h5>
         <p>This is the admin dashboard.</p>
       </div>
     </div>

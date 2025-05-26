@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
                     </div>
 
 
-                        <button class="btn btn-primary w-100 py-2 mt-3" type="submit" name="register">Register</button>
+                        <button class="btn btn-warning w-100 py-2 mt-3" type="submit" name="register">Register</button>
 
                        
                     </form>
