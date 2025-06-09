@@ -1,75 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!-- file_/admin_dashboard.php -->
+ <?php
+
+include 'config/db.php';
+if (!isset($_SESSION['user_id']) || $_SESSION['role_id'] != 1) {
+    header("Location: index.php?page=login");
+    exit();
+}
+// Ambil data user termasuk foto profil dari database
+$user_id = $_SESSION['user_id'];
+$query = "SELECT fullname, email, image FROM tb_users WHERE id = ?";
+$stmt = $conn->prepare($query);
+$stmt->bind_param("i", $user_id);
+$stmt->execute();
+$result = $stmt->get_result();
+$user_data = $result->fetch_assoc();
+$stmt->close();
+?>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <style>
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .profile-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body style="background-color: beige; display: flex; flex-direction: column; min-height: 100vh;">
-  <nav class="navbar navbar-expand-lg bg-dark border-bottom border-5 border-warning">
-    <div class="container-fluid">
-      <a class="navbar-brand text-white fw-bold" href="">
-      <h1 class="mb-0"><i class="bi bi-robot text-warning"></i><b>&nbsp;ChatZone</b></h1>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-        aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="profile-card text-center">
+                    <!-- Tampilkan foto profil -->
+                    <?php if (!empty($user_data['image'])): ?>
+                        <img src="<?php echo htmlspecialchars($user_data['image']); ?>" alt="Foto Profil" class="profile-img mb-3">
+                    <?php else: ?>
+                        <img src="./img/Foto Profil Default.jpg" alt="Foto Profil Default" class="profile-img mb-3">
+                    <?php endif; ?>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarScroll">
-        <ul class="navbar-nav me-3 my-2 my-lg-0 navbar-nav-scroll">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="" style="font-size: 20px;">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="" style="font-size: 20px;">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" style="font-size: 20px;">Keunggulan</a>
-          </li>
-        </ul>
-
-        <!-- Login Button -->
-        <a href="index.php?page=logout" class="btn btn-warning"><b> Logout </b><i class="bi bi-box-arrow-left"></i></a>
-      </div>
+                    <h3> <a href="?page=manage_users" class="btn btn-outline-primary bi bi-person-circle">
+                             <?php echo htmlspecialchars($user_data['fullname']); ?>
+                            </a></h3>
+                   
+                    <p>Email: <?php echo htmlspecialchars($user_data['email']); ?></p>
+                     
+                </div>
+            </div>
+            
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h2>CHATAI</h2>
+                    </div>
+                    <div class="card-body">
+                        <h3>Welcome, <?php echo htmlspecialchars($user_data['fullname']); ?>!</h3>
+                        
+                        <p>Tekan tombol untuk memulai chat dengan CHATAI!</p>
+                       <div class="mt-4">
+                            <div class="d-flex flex-wrap gap-3">
+                            <a href="file_/chatbot.php" class="btn btn-outline-primary bi bi-chat-left-dots ms-2">
+                                New Chat 
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <div class="container mt-4 flex-grow-1">
-    <div class="p-5 text-dark d-flex align-items-center justify-content-center" 
-         style="border-top: 4px solid gold; 
-                border-right: 20px solid gold; 
-                border-top-right-radius: 40px;
-                border-radius: 0 0 50px 10px;">
 
-      <!-- Text Content -->
-      <div class="text-center">
-        <h5 style="font-size:60px;"><b>Welcome, <?php echo $_SESSION['fullname'];?>!</b></h5>
-        <p>This is the admin dashboard.</p>
-      </div>
-    </div>
-  </div>
-
-  <footer class="bg-dark text-white text-center mt-auto py-2" style="padding: 20px 0;">
-    <div class="container">
-      <p>&copy; <b> OUR SOCIAL MEDIA </b></p>
-      <div>
-        <a href="https://www.instagram.com" target="_blank" class="text-white mx-2">
-          <i class="fab fa-instagram fa-2x"></i>
-        </a>
-        <a href="https://www.facebook.com" target="_blank" class="text-white mx-2">
-          <i class="fab fa-facebook fa-2x"></i>
-        </a>
-        <a href="https://twitter.com" target="_blank" class="text-white mx-2">
-          <i class="fab fa-twitter fa-2x"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
+    
 </body>
-</html>
